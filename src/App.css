@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+#header-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 10px;
+  grid-template-areas: 
+  "header header header header" 
+  "nav nav nav nav";
+  padding-bottom: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page-header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0px 30px;
+  grid-area: header;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-base {
+  background-color: #4b4b4b; /* Background color */
+  color: #fff; /* Text color */
+  padding: 10px 0; /* Add some padding for spacing */
+  grid-area: nav;
+  margin-top: 10px;
+  
+  
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navigation styles */
+nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+    "pic-some . . cart-button"
+    "pic-some . . cart-button";
+  /* grid-auto-rows: minmax(500px); */
+}
+
+.main-nav-container {
+  grid-area: pic-some;
+  margin: 0 0 0 3em;
+  width: 100px;
+}
+
+.main-nav-container a:hover {
+  color: greenyellow;
+  transition: 0.2s;
+}
+/* Nav Link styles */
+nav a {
+  color: #fff; /* Link text color */
+  text-decoration: none; /* Remove underline */
+}
+
+
+.cart-div {
+  display: flex;
+  justify-content: flex-end;
+  grid-area: cart-button;  
+  margin: 0 2em 0;
+
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 65px;
+  margin-right: 10px;
+}
+
+.cart-container:hover{
+  color: greenyellow ;
+  transition: color 0.2s;
+}
+
+.cart-icon {
+width: 15.2px;
+margin-right: 2px;
+padding: 0;
+top: 20px;
+margin-top: 2px;
+}
+.cart-text {
+width: 40px;
+}
+
+
+
+#cart-page-container{
+  background-color: aliceblue;
+  margin: 0;
+  padding: 10px;
+  min-height: 100px;
+}
+
+#photos-container{
+  background-color: seashell;
+  margin: 0;
+  padding: 10px;
+  min-height: 100px;
 }
